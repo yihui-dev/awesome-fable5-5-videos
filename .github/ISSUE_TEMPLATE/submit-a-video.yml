@@ -1,0 +1,27 @@
+name: Submit a Fable 5.5 video
+description: Suggest a video for the list
+title: "Add: "
+labels: ["new video"]
+body:
+  - type: input
+    id: post
+    attributes:
+      label: Link to the post
+      description: The post where the author shares the video and says Fable 5.5 made it.
+      placeholder: https://x.com/...
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Prompt (optional)
+      description: The exact prompt, if the author published it, with a link to where.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: The author says in their own post that Fable 5.5 made this video.
+          required: true
+        - label: It is not a side-by-side comparison of several models.
+          required: true
